@@ -1,0 +1,94 @@
+ /* Mobile Responsiveness */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 3rem;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+            }
+            
+            .hero p {
+                margin: 0 auto 2rem;
+            }
+            
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 300px;
+                order: -1;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background: rgba(18, 24, 38, 0.95);
+                width: 100%;
+                height: calc(100vh - 70px);
+                padding: 2rem;
+                transition: var(--transition);
+                backdrop-filter: blur(10px);
+                align-items: center;
+                justify-content: flex-start;
+                gap: 2rem;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .code-icon {
+                width: 250px;
+                height: 250px;
+                font-size: 6rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin: 1rem 0;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .code-icon {
+                width: 200px;
+                height: 200px;
+                font-size: 5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }

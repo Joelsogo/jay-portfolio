@@ -1,94 +1,65 @@
- /* Mobile Responsiveness */
-        @media (max-width: 900px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                gap: 3rem;
-            }
-            
-            .hero-content {
-                padding-right: 0;
-            }
-            
-            .hero p {
-                margin: 0 auto 2rem;
-            }
-            
-            .about-content,
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-image {
-                height: 300px;
-                order: -1;
-            }
-            
+ /* Responsive */
+        @media (max-width: 800px) {
             .menu-toggle {
                 display: block;
             }
-            
             .nav-links {
-                position: fixed;
-                top: 70px;
-                right: -100%;
+                display: none;
+                width: 100%;
                 flex-direction: column;
-                background: rgba(18, 24, 38, 0.95);
-                width: 100%;
-                height: calc(100vh - 70px);
-                padding: 2rem;
-                transition: var(--transition);
-                backdrop-filter: blur(10px);
-                align-items: center;
-                justify-content: flex-start;
-                gap: 2rem;
+                background: var(--bg-dark);
+                padding: 1.5rem;
+                gap: 1rem;
+                border-radius: 1rem;
+                margin-top: 1rem;
             }
-            
             .nav-links.active {
-                right: 0;
+                display: flex;
             }
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.8rem;
+            .hero {
+                flex-direction: column;
+                text-align: center;
             }
-            
-            .code-icon {
-                width: 250px;
-                height: 250px;
-                font-size: 6rem;
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
             }
-        }
-        
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .hero-buttons {
+                justify-content: center;
             }
-            
-            .btn {
-                display: block;
-                width: 100%;
-                margin: 1rem 0;
+            .about-content {
+                flex-direction: column;
             }
-            
-            .projects-grid {
+            .contact-container {
                 grid-template-columns: 1fr;
             }
-        }
-        
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .code-icon {
-                width: 200px;
-                height: 200px;
-                font-size: 5rem;
-            }
-            
             .section-title h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
+        }
+
+        @media (max-width: 550px) {
+            .container {
+                padding: 0 1.2rem;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0 0;
+            justify-content: flex-start;
+        }
+        .stat-badge {
+            background: rgba(45, 106, 79, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border: 1px solid rgba(64, 145, 108, 0.4);
         }

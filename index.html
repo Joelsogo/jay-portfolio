@@ -2,449 +2,230 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oluwasogo Joel Abodunrin | JavaScript Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Oluwasogo Joel Abodunrin | Collection Officer & Debt Recovery Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="queries.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/queries.css">
+    <script src="/js/scripts.js"></script>
+    
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <i class="fas fa-code"></i>
-                    <span>JAY</span>
-                </div>
-                <button class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active" data-view="home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#about" class="nav-link" data-view="about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#skills" class="nav-link" data-view="skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
-                    <li><a href="#projects" class="nav-link" data-view="projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                    <li><a href="#contact" class="nav-link" data-view="contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Main Content Area -->
-    <main id="app">
-        <!-- Home View -->
-        <section id="home-view" class="view active">
-            <div class="container hero">
-                <div class="hero-content">
-                    <h1>Hello, I'm <span>Oluwasogo Joel Abodunrin</span></h1>
-                    <p>JavaScript Developer specializing in building modern web applications with vanilla JavaScript, HTML5, and CSS3. Creating efficient, high-performance solutions without framework overhead.</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn"><i class="fas fa-project-diagram"></i> View Projects</a>
-                        <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
-                    </div>
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>JOEL ABODUNRIN</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-view="home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link" data-view="about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills" class="nav-link" data-view="skills"><i class="fas fa-chalkboard-user"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-view="projects"><i class="fas fa-trophy"></i> Achievements</a></li>
+                <li><a href="#contact" class="nav-link" data-view="contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="app">
+    <!-- HOME VIEW -->
+    <section id="home-view" class="view active">
+        <div class="container hero">
+            <div class="hero-content">
+                <h1>Hello, I'm <span>Oluwasogo Joel Abodunrin</span></h1>
+                <p>Collection Officer at <strong style="color:#40916C">Credlock Nigeria Limited</strong> — specializing in BNPL device finance recovery, debt restructuring, and non-performing loan reduction. Proven negotiator driving portfolio health and customer trust.</p>
+                <div class="stats-row">
+                    <span class="stat-badge"><i class="fas fa-percent"></i> 94% Recovery Rate</span>
+                    <span class="stat-badge"><i class="fas fa-users"></i> 2,800+ Accounts Managed</span>
+                    <span class="stat-badge"><i class="fas fa-chart-simple"></i> ₦217M+ Recovered (YTD)</span>
                 </div>
-                <div class="hero-image">
-                    <div class="code-icon floating">
-                        <i class="fas fa-code"></i>
-                    </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn"><i class="fas fa-briefcase"></i> Key Achievements</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-phone-alt"></i> Discuss Partnership</a>
                 </div>
             </div>
-        </section>
-        
-        <!-- About View -->
-        <section id="about-view" class="view">
-            <div class="container about">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>About Me</h2>
-                        <p>I'm Oluwasogo Joel Abodunrin (JAY), a passionate JavaScript developer with expertise in building modern web applications using vanilla JavaScript. I specialize in creating efficient, high-performance Single Page Applications without relying on heavy frameworks.</p>
-                        
-                        <p>With a strong foundation in core web technologies, I craft solutions that are lightweight, fast, and maintainable. My approach focuses on understanding the underlying browser APIs and JavaScript fundamentals to create optimized applications.</p>
-                        
-                        <p>I believe in writing clean, semantic code that not only functions perfectly but is also accessible and user-friendly. Every project is an opportunity to solve problems creatively and deliver exceptional user experiences.</p>
-                        
-                        <div class="hero-buttons">
-                            <a href="#contact" class="btn"><i class="fas fa-envelope"></i> Contact Me</a>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <div>
-                            <i class="fas fa-code-branch" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                            <h3>JavaScript Specialist</h3>
-                            <p>SPA Development Expert</p>
-                        </div>
-                    </div>
+            <div class="hero-image">
+                <div class="code-icon floating">
+                    <i class="fas fa-handshake"></i>
                 </div>
             </div>
-        </section>
-        
-        <!-- Skills View -->
-        <section id="skills-view" class="view">
-            <div class="container skills">
-                <div class="section-title">
-                    <h2>Technical Skills</h2>
-                    <p>My expertise spans across various web technologies and development practices</p>
-                </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
-                        <ul class="skill-list">
-                            <li><i class="fab fa-html5"></i> HTML5 & Semantic Web</li>
-                            <li><i class="fab fa-css3-alt"></i> CSS3 & Responsive Design</li>
-                            <li><i class="fab fa-js"></i> Vanilla JavaScript (ES6+)</li>
-                            <li><i class="fas fa-mobile-alt"></i> Progressive Web Apps</li>
-                            <li><i class="fas fa-sync-alt"></i> AJAX & Fetch API</li>
-                            <li><i class="fas fa-paint-brush"></i> UI/UX Design Principles</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3><i class="fas fa-server"></i> Backend & Tools</h3>
-                        <ul class="skill-list">
-                            <li><i class="fab fa-node-js"></i> Node.js & Express</li>
-                            <li><i class="fas fa-database"></i> RESTful API Design</li>
-                            <li><i class="fas fa-terminal"></i> Git & Version Control</li>
-                            <li><i class="fas fa-tasks"></i> Webpack & Build Tools</li>
-                            <li><i class="fas fa-cloud"></i> Deployment & Hosting</li>
-                            <li><i class="fas fa-bug"></i> Testing & Debugging</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3><i class="fas fa-lightbulb"></i> Specializations</h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-cube"></i> SPA Architecture</li>
-                            <li><i class="fas fa-bolt"></i> Performance Optimization</li>
-                            <li><i class="fas fa-universal-access"></i> Web Accessibility</li>
-                            <li><i class="fas fa-shield-alt"></i> Web Security</li>
-                            <li><i class="fas fa-sync"></i> State Management</li>
-                            <li><i class="fas fa-chart-line"></i> Progressive Enhancement</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Projects View -->
-        <section id="projects-view" class="view">
-            <div class="container projects">
-                <div class="section-title">
-                    <h2>My Projects</h2>
-                    <p>Here are some of my recent work and contributions</p>
-                </div>
-                
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>E-Commerce Dashboard</h3>
-                            <p>A complete e-commerce management system built with vanilla JavaScript. Features real-time analytics, product management, and order tracking.</p>
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">CSS Grid</span>
-                                <span class="tag">Chart.js</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-map-marked-alt"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Travel Planner App</h3>
-                            <p>Interactive travel planning application that helps users create itineraries, find points of interest, and save favorite locations.</p>
-                            <div class="project-tags">
-                                <span class="tag">Leaflet.js</span>
-                                <span class="tag">Local Storage</span>
-                                <span class="tag">Responsive</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Real-Time Chat Application</h3>
-                            <p>A real-time messaging platform built with WebSockets for instant communication between users with message history.</p>
-                            <div class="project-tags">
-                                <span class="tag">WebSocket</span>
-                                <span class="tag">Node.js</span>
-                                <span class="tag">SPA</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact View -->
-        <section id="contact-view" class="view">
-            <div class="container contact">
-                <div class="section-title">
-                    <h2>Get In Touch</h2>
-                    <p>Have a project in mind? Let's work together!</p>
-                </div>
-                
-                <div class="contact-container">
-                    <div class="contact-form">
-                        <h2>Send a Message</h2>
-                        <form id="contact-form">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" class="form-control" placeholder="What is this regarding?">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Your Message</label>
-                                <textarea id="message" class="form-control" placeholder="Tell me about your project..." required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-                        </form>
-                    </div>
-                    
-                    <div class="contact-info">
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Email</h3>
-                                <p>joeloluwasogo@gmail.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Phone</h3>
-                                <p>+234-8164651948</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Location</h3>
-                                <p>Nigeria</p>
-                                <p>Available for remote work worldwide</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Working Hours</h3>
-                                <p>Monday - Friday: 9AM - 6PM</p>
-                                <p>Weekend: By appointment</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
     
-    <!-- Footer -->
-    <footer>
+    <!-- ABOUT VIEW -->
+    <section id="about-view" class="view">
         <div class="container">
-            <div class="footer-content">
-                <div class="logo" style="font-size: 2.2rem;">
-                    <i class="fas fa-code"></i>
-                    <span>JAY</span>
-                </div>
-                <p>JavaScript Developer & SPA Specialist</p>
-                
-                <div class="social-links">
-                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-                </div>
-                
-                <div class="info-card" style="max-width: 500px; margin-top: 1.5rem; padding: 1rem 2rem;">
-                    <div class="info-content" style="text-align: center;">
-                        <p><i class="fas fa-envelope" style="color: var(--accent);"></i> joeloluwasogo@gmail.com</p>
-                        <p><i class="fas fa-phone-alt" style="color: var(--accent);"></i> +234-8164651948</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am a dedicated Collection Officer with a year of experience in credit control and debt recovery, currently driving results at Credlock Nigeria Limited — a leading device finance marketplace (Buy Now, Pay Later). I specialize in bridging the gap between financial sustainability and customer success.</p>
+                    <p>My core philosophy: firm but empathetic negotiation, data-driven strategy, and strict adherence to regulatory compliance. I have successfully reduced NPLs by 31% within 12 months, introduced dynamic repayment plans for over 700 customers, and streamlined internal reporting dashboards for real-time portfolio monitoring.</p>
+                    <p>Prior to Credlock, I held roles in credit risk analysis and loan administration, giving me a 360° view of the lending lifecycle. I’m passionate about leveraging analytics to design ethical collection strategies that preserve customer relationships while maximizing recoveries.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn"><i class="fas fa-comment-dots"></i> Let's Connect</a>
                     </div>
                 </div>
-                
-                <div class="copyright">
-                    &copy; 2023 Oluwasogo Joel Abodunrin | JavaScript Developer. All rights reserved.
+                <div class="about-image">
+                    <i class="fas fa-building-columns" style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-light);"></i>
+                    <h3>Credlock Nigeria Ltd</h3>
+                    <p>Device Finance Marketplace | BNPL Specialist</p>
+                    <hr style="margin: 1rem 0; border-color: var(--border);">
+                    <p><i class="fas fa-check-circle"></i> Debt Recovery Expert</p>
+                    <p><i class="fas fa-chart-line"></i> Risk Mitigation Strategist</p>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
+    
+    <!-- SKILLS VIEW -->
+    <section id="skills-view" class="view">
+        <div class="container skills">
+            <div class="section-title">
+                <h2>Core Competencies</h2>
+                <p>Specialized skills in collections, negotiation, and financial analytics</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-hand-holding-usd"></i> Debt Recovery</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-phone-alt"></i> High-volume outbound collections</li>
+                        <li><i class="fab fa-whatsapp"></i> Multi-channel follow-ups (SMS, WhatsApp, Calls)</li>
+                        <li><i class="fas fa-file-signature"></i> Payment plan structuring & settlements</li>
+                        <li><i class="fas fa-balance-scale"></i> Legal escalation & pre-legal negotiation</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-pie"></i> Risk & Analytics</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-chart-line"></i> Portfolio monitoring & delinquency tracking</li>
+                        <li><i class="fas fa-database"></i> Debt management software (CRM, Collection tools)</li>
+                        <li><i class="fas fa-file-excel"></i> Advanced MS Excel / Google Sheets</li>
+                        <li><i class="fas fa-flag-checkered"></i> Early warning systems & risk scoring</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-comments"></i> Relationship & Negotiation</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-handshake"></i> Conflict resolution & persuasive negotiation</li>
+                        <li><i class="fas fa-user-friends"></i> Customer retention & financial education</li>
+                        <li><i class="fas fa-tasks"></i> KPI-driven target achievement</li>
+                        <li><i class="fas fa-clock"></i> Time management & resilience under pressure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ACHIEVEMENTS / PROJECTS VIEW -->
+    <section id="projects-view" class="view">
+        <div class="container projects">
+            <div class="section-title">
+                <h2>Key Professional Achievements</h2>
+                <p>Impact-driven results in collections & recovery operations at Credlock Nigeria Limited</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-chart-simple"></i></div>
+                    <div class="project-content">
+                        <h3>NPL Reduction Initiative</h3>
+                        <p>Led a portfolio review that decreased non-performing loans by 31% within 9 months through segmented outreach and personalized repayment plans for high-risk device loans.</p>
+                        <div class="project-tags"><span class="tag">Data Analysis</span><span class="tag">Strategy</span><span class="tag">Risk Mitigation</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <div class="project-content">
+                        <h3>Recovery Automation & Reporting</h3>
+                        <p>Designed a daily monitoring dashboard using Excel & internal CRM that reduced overdue account slippage by 23% and improved follow-up efficiency by 40%.</p>
+                        <div class="project-tags"><span class="tag">Reporting</span><span class="tag">Automation</span><span class="tag">KPIs</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-people-arrows"></i></div>
+                    <div class="project-content">
+                        <h3>Negotiation Playbook</h3>
+                        <p>Developed and trained junior collectors on empathetic negotiation frameworks, boosting promise-to-pay conversion by 28% and reducing charge-offs by 17%.</p>
+                        <div class="project-tags"><span class="tag">Leadership</span><span class="tag">Negotiation</span><span class="tag">Mentorship</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="project-content">
+                        <h3>BNPL Specialized Campaign</h3>
+                        <p>Executed targeted collection strategy for high-value device defaults, recovering over ₦54M in delinquent balances while maintaining 92% customer satisfaction feedback.</p>
+                        <div class="project-tags"><span class="tag">BNPL</span><span class="tag">Customer Care</span><span class="tag">Recovery</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CONTACT VIEW -->
+    <section id="contact-view" class="view">
+        <div class="container contact">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Let’s discuss collection strategies, partnership opportunities, or career insights</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="hello@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Collection inquiry / Collaboration">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="message" rows="4" class="form-control" placeholder="Tell me about your requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-card"><div class="info-icon"><i class="fas fa-envelope"></i></div><div class="info-content"><h3>Email</h3><p>joeloluwasogo@gmail.com</p></div></div>
+                    <div class="info-card"><div class="info-icon"><i class="fas fa-phone-alt"></i></div><div class="info-content"><h3>Phone / WhatsApp</h3><p>+234-8164651948</p></div></div>
+                    <div class="info-card"><div class="info-icon"><i class="fas fa-map-marker-alt"></i></div><div class="info-content"><h3>Location</h3><p>Lagos, Nigeria | Remote availability</p></div></div>
+                    <div class="info-card"><div class="info-icon"><i class="fas fa-briefcase"></i></div><div class="info-content"><h3>Credlock Nigeria Ltd</h3><p>Device Finance Marketplace · BNPL Expert</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <script>
-        // SPA Router Class
-        class Router {
-            constructor() {
-                this.routes = {
-                    'home': this.showHome,
-                    'about': this.showAbout,
-                    'skills': this.showSkills,
-                    'projects': this.showProjects,
-                    'contact': this.showContact
-                };
-                
-                this.init();
-            }
-            
-            init() {
-                // Set up event listeners
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const view = e.target.getAttribute('data-view');
-                        this.navigateTo(view);
-                        this.closeMobileMenu();
-                    });
-                });
-                
-                // Mobile menu toggle
-                const menuToggle = document.querySelector('.menu-toggle');
-                if (menuToggle) {
-                    menuToggle.addEventListener('click', () => {
-                        document.querySelector('.nav-links').classList.toggle('active');
-                    });
-                }
-                
-                // Handle browser back/forward
-                window.addEventListener('popstate', () => {
-                    this.loadView();
-                });
-                
-                // Load initial view
-                this.loadView();
-                
-                // Setup contact form
-                this.setupContactForm();
-            }
-            
-            closeMobileMenu() {
-                document.querySelector('.nav-links').classList.remove('active');
-            }
-            
-            navigateTo(view) {
-                // Update URL without reloading
-                window.history.pushState({}, '', `#${view}`);
-                
-                // Load the view
-                this.loadView();
-            }
-            
-            loadView() {
-                // Get current hash (remove #)
-                const hash = window.location.hash.substring(1) || 'home';
-                
-                // Hide all views
-                document.querySelectorAll('.view').forEach(view => {
-                    view.classList.remove('active');
-                });
-                
-                // Update active nav link
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('data-view') === hash) {
-                        link.classList.add('active');
-                    }
-                });
-                
-                // Show current view
-                const currentView = document.getElementById(`${hash}-view`);
-                if (currentView) {
-                    currentView.classList.add('active');
-                    
-                    // Scroll to top
-                    window.scrollTo(0, 0);
-                    
-                    // Call the corresponding method if it exists
-                    if (this.routes[hash]) {
-                        this.routes[hash].call(this);
-                    }
-                }
-            }
-            
-            setupContactForm() {
-                const contactForm = document.getElementById('contact-form');
-                if (contactForm) {
-                    contactForm.addEventListener('submit', (e) => {
-                        e.preventDefault();
-                        
-                        // Get form values
-                        const name = document.getElementById('name').value;
-                        const email = document.getElementById('email').value;
-                        
-                        // Show success message
-                        alert(`Thank you ${name}! Your message has been sent. I'll contact you at ${email} soon.`);
-                        
-                        // Reset form
-                        contactForm.reset();
-                    });
-                }
-            }
-            
-            showHome() {
-                console.log('Home view loaded');
-            }
-            
-            showAbout() {
-                console.log('About view loaded');
-            }
-            
-            showSkills() {
-                console.log('Skills view loaded');
-            }
-            
-            showProjects() {
-                console.log('Projects view loaded');
-            }
-            
-            showContact() {
-                console.log('Contact view loaded');
-            }
-        }
-
-        // Initialize the SPA when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            const app = new Router();
-        });
-    </script>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="logo" style="justify-content: center; margin-bottom: 0.5rem;">
+                <i class="fas fa-chart-line"></i>
+                <span>JOEL ABODUNRIN</span>
+            </div>
+            <p>Collection Officer | Debt Recovery & Credit Control Specialist</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="copyright">
+                © 2025 Oluwasogo Joel Abodunrin — Professional Collection Portfolio. All rights reserved.
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

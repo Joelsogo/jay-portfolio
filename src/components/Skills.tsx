@@ -1,6 +1,6 @@
-const categories = [
+const groups = [
   {
-    title: 'Core Competencies',
+    title: 'Core competencies',
     items: [
       'Independent Research & Information Verification',
       'Analytical Reasoning',
@@ -17,9 +17,9 @@ const categories = [
     ],
   },
   {
-    title: 'Tools & Technologies',
+    title: 'Tools & technologies',
     items: [
-      'Google Workspace / Sheets / Forms',
+      'Google Workspace, Sheets, Forms',
       'Microsoft Excel',
       'Ticketing / Help-desk workflows',
       'Postman & REST APIs',
@@ -38,20 +38,19 @@ export default function Skills() {
   return (
     <section id="skills" className="section">
       <div className="container">
-        <div className="section-title">
-          <h2>Skills & Tools</h2>
+        <div className="section-header">
+          <span className="label">Capabilities</span>
+          <h2>Skills & tools</h2>
           <p>Research, quality review, and modern technical toolkit</p>
         </div>
 
-        <div className="skills-grid">
-          {categories.map((cat) => (
-            <div key={cat.title} className="skill-card card">
-              <h3>{cat.title}</h3>
+        <div className="grid">
+          {groups.map((g) => (
+            <div key={g.title} className="card group">
+              <h3>{g.title}</h3>
               <div className="tags">
-                {cat.items.map((item) => (
-                  <span key={item} className="tag">
-                    {item}
-                  </span>
+                {g.items.map((item) => (
+                  <span key={item} className="tag">{item}</span>
                 ))}
               </div>
             </div>
@@ -60,27 +59,15 @@ export default function Skills() {
       </div>
 
       <style>{`
-        .skills-grid {
-          display: grid;
-          gap: 1.25rem;
-        }
-        .skill-card {
-          padding: 1.5rem;
-        }
-        .skill-card h3 {
-          font-size: 1.1rem;
-          color: var(--primary-light);
+        .grid { display: grid; gap: 1.25rem; }
+        .group { padding: 1.5rem; }
+        .group h3 {
+          font-size: 0.9rem; font-weight: 600; color: var(--text);
           margin-bottom: 1rem;
         }
-        .tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-        }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
         @media (min-width: 640px) {
-          .skills-grid {
-            grid-template-columns: 1fr 1fr;
-          }
+          .grid { grid-template-columns: 1fr 1fr; }
         }
       `}</style>
     </section>

@@ -55,14 +55,8 @@ const jobs = [
   },
 ]
 
-const education = {
-  degree: 'B.Eng., Electrical & Electronics Engineering',
-  school: 'University of Ilorin',
-  year: '2022',
-}
-
 const certifications = [
-  'Google Cybersecurity Professional Certificate (Google/Coursera) — 09/2026',
+  'Google Cybersecurity Professional Certificate — Google/Coursera (09/2026)',
   'Certified Professional in Project Management (CPPM-GAQM)',
   'Executive Diploma in Operations Management',
   'Professional Certificate in Office Administration Management',
@@ -74,37 +68,36 @@ export default function Experience() {
   return (
     <section id="experience" className="section">
       <div className="container">
-        <div className="section-title">
+        <div className="section-header">
+          <span className="label">Career</span>
           <h2>Experience</h2>
           <p>Professional roles, education & certifications</p>
         </div>
 
         <div className="timeline">
           {jobs.map((job, i) => (
-            <div key={i} className="job card">
-              <div className="job-header">
+            <article key={i} className="card job">
+              <div className="head">
                 <div>
                   <h3>{job.role}</h3>
                   <p className="company">{job.company}</p>
                 </div>
-                <span className="period">{job.period}</span>
+                <time>{job.period}</time>
               </div>
               <ul>
                 {job.points.map((p, j) => (
                   <li key={j}>{p}</li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
 
-        <div className="edu-certs">
+        <div className="bottom">
           <div className="card edu">
             <h3>Education</h3>
-            <p className="degree">{education.degree}</p>
-            <p className="school">
-              {education.school} · {education.year}
-            </p>
+            <p className="degree">B.Eng., Electrical &amp; Electronics Engineering</p>
+            <p className="school">University of Ilorin · 2022</p>
           </div>
           <div className="card certs">
             <h3>Certifications</h3>
@@ -118,88 +111,38 @@ export default function Experience() {
       </div>
 
       <style>{`
-        .timeline {
-          display: grid;
-          gap: 1rem;
-          margin-bottom: 2rem;
+        .timeline { display: grid; gap: 1rem; margin-bottom: 1.5rem; }
+        .job { padding: 1.35rem 1.4rem; }
+        .head {
+          display: flex; flex-wrap: wrap; justify-content: space-between;
+          gap: 0.4rem 1rem; margin-bottom: 0.75rem;
         }
-        .job {
-          padding: 1.35rem;
+        .job h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.15rem; }
+        .company { color: var(--accent); font-size: 0.875rem; font-weight: 500; }
+        time { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; }
+        .job ul li {
+          color: var(--text-secondary); font-size: 0.9rem; line-height: 1.55;
+          padding: 0.25rem 0 0.25rem 1rem; position: relative;
         }
-        .job-header {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          gap: 0.5rem;
-          margin-bottom: 0.85rem;
+        .job ul li::before {
+          content: ''; position: absolute; left: 0; top: 0.65rem;
+          width: 4px; height: 4px; border-radius: 50%; background: var(--accent);
         }
-        .job h3 {
-          font-size: 1.05rem;
-          margin-bottom: 0.2rem;
-        }
-        .company {
-          color: var(--primary-light);
-          font-size: 0.9rem;
-          font-weight: 500;
-        }
-        .period {
-          font-size: 0.8rem;
-          color: var(--text-muted);
-          white-space: nowrap;
-        }
-        .job ul {
-          list-style: none;
-        }
-        .job li {
-          color: var(--text-muted);
-          font-size: 0.9rem;
-          padding: 0.3rem 0 0.3rem 1rem;
-          position: relative;
-          line-height: 1.5;
-        }
-        .job li::before {
-          content: '▸';
-          position: absolute;
-          left: 0;
-          color: var(--accent);
-          font-size: 0.75rem;
-        }
-        .edu-certs {
-          display: grid;
-          gap: 1rem;
-        }
-        .edu, .certs {
-          padding: 1.35rem;
-        }
+        .bottom { display: grid; gap: 1rem; }
+        .edu, .certs { padding: 1.35rem 1.4rem; }
         .edu h3, .certs h3 {
-          font-size: 1.05rem;
-          color: var(--primary-light);
-          margin-bottom: 0.75rem;
+          font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em;
+          text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem;
         }
-        .degree {
-          font-weight: 600;
-          margin-bottom: 0.25rem;
+        .degree { font-weight: 600; margin-bottom: 0.2rem; }
+        .school { color: var(--text-secondary); font-size: 0.9rem; }
+        .certs ul li {
+          color: var(--text-secondary); font-size: 0.875rem;
+          padding: 0.4rem 0; border-bottom: 1px solid var(--border);
         }
-        .school {
-          color: var(--text-muted);
-          font-size: 0.9rem;
-        }
-        .certs ul {
-          list-style: none;
-        }
-        .certs li {
-          color: var(--text-muted);
-          font-size: 0.88rem;
-          padding: 0.35rem 0;
-          border-bottom: 1px solid var(--border);
-        }
-        .certs li:last-child {
-          border-bottom: none;
-        }
+        .certs ul li:last-child { border-bottom: none; }
         @media (min-width: 768px) {
-          .edu-certs {
-            grid-template-columns: 1fr 1.4fr;
-          }
+          .bottom { grid-template-columns: 1fr 1.5fr; }
         }
       `}</style>
     </section>

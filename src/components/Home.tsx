@@ -1,4 +1,4 @@
-import { FiArrowRight, FiMail } from 'react-icons/fi'
+import { FiArrowRight, FiDownload, FiLinkedin, FiGithub } from 'react-icons/fi'
 import type { SectionId } from '../App'
 
 interface Props {
@@ -8,110 +8,87 @@ interface Props {
 export default function Home({ onNavigate }: Props) {
   return (
     <section id="home" className="section home">
-      <div className="container hero">
-        <div className="hero-badge">Evaluation Specialist Candidate</div>
-        <h1>
-          Hi, I'm <span>Joel Oluwasogo</span>
-        </h1>
-        <p className="hero-lead">
-          Analytical engineering graduate focused on quality assurance, technical investigation,
-          research, and precise written evaluation. Currently Quality Assurance Engineer at
-          Credlock Nigeria Limited.
-        </p>
-        <div className="hero-stats">
-          <div className="stat">
-            <strong>B.Eng</strong>
-            <span>Electrical & Electronics</span>
+      <div className="container">
+        <div className="hero">
+          <p className="eyebrow">Quality Assurance · Evaluation · Research</p>
+          <h1>
+            Joel <span>Oluwasogo</span>
+          </h1>
+          <p className="lead">
+            Analytical engineering graduate and Quality Assurance Engineer at Credlock Nigeria Limited.
+            I investigate issues rigorously, document evidence clearly, and deliver precise written
+            evaluations — ready for research, QA, and evaluation specialist roles.
+          </p>
+
+          <div className="meta">
+            <span>Ilorin, Nigeria</span>
+            <span className="dot">·</span>
+            <span>Open to opportunities</span>
           </div>
-          <div className="stat">
-            <strong>QA</strong>
-            <span>Quality Assurance</span>
+
+          <div className="actions">
+            <button className="btn btn-primary" onClick={() => onNavigate('experience')}>
+              View experience <FiArrowRight size={16} />
+            </button>
+            <a
+              className="btn btn-ghost"
+              href="https://www.linkedin.com/in/joel-oluwasogo-563257179/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiDownload size={15} /> Resume / LinkedIn
+            </a>
           </div>
-          <div className="stat">
-            <strong>Google</strong>
-            <span>Cybersecurity Cert</span>
+
+          <div className="socials">
+            <a href="https://www.linkedin.com/in/joel-oluwasogo-563257179/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <FiLinkedin size={18} /> LinkedIn
+            </a>
+            <a href="https://github.com/Joelsogo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <FiGithub size={18} /> GitHub
+            </a>
+            <a href="mailto:joeloluwasogo@gmail.com" aria-label="Email">
+              joeloluwasogo@gmail.com
+            </a>
           </div>
-        </div>
-        <div className="hero-actions">
-          <button className="btn" onClick={() => onNavigate('experience')}>
-            View Experience <FiArrowRight />
-          </button>
-          <button className="btn btn-outline" onClick={() => onNavigate('contact')}>
-            <FiMail /> Contact Me
-          </button>
         </div>
       </div>
 
       <style>{`
-        .home {
-          padding-top: 2.5rem;
-          padding-bottom: 2rem;
+        .home { padding-top: 3rem; padding-bottom: 2.5rem; }
+        .hero { max-width: 640px; }
+        .eyebrow {
+          font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em;
+          text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
         }
-        .hero {
-          text-align: center;
-          max-width: 720px;
-          margin: 0 auto;
+        h1 {
+          font-size: clamp(2.25rem, 7vw, 3.25rem);
+          font-weight: 800; letter-spacing: -0.03em; line-height: 1.1;
+          margin-bottom: 1.15rem;
         }
-        .hero-badge {
-          display: inline-block;
-          background: rgba(64, 145, 108, 0.15);
-          color: var(--primary-light);
-          border: 1px solid rgba(64, 145, 108, 0.35);
-          padding: 0.35rem 1rem;
-          border-radius: 999px;
-          font-size: 0.8rem;
-          font-weight: 600;
+        h1 span { color: var(--accent); }
+        .lead {
+          color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;
           margin-bottom: 1.25rem;
         }
-        .hero h1 {
-          font-size: clamp(2rem, 6vw, 3rem);
-          font-weight: 800;
-          line-height: 1.15;
-          margin-bottom: 1rem;
-          letter-spacing: -0.5px;
+        .meta {
+          display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;
+          color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.75rem;
         }
-        .hero h1 span {
-          color: var(--primary-light);
+        .dot { opacity: 0.5; }
+        .actions {
+          display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2rem;
         }
-        .hero-lead {
-          color: var(--text-muted);
-          font-size: 1.05rem;
-          margin-bottom: 1.75rem;
-          line-height: 1.65;
+        .socials {
+          display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center;
         }
-        .hero-stats {
-          display: flex;
-          justify-content: center;
-          gap: 1rem;
-          flex-wrap: wrap;
-          margin-bottom: 2rem;
+        .socials a {
+          display: inline-flex; align-items: center; gap: 0.4rem;
+          font-size: 0.85rem; color: var(--text-muted); transition: color 0.15s;
         }
-        .stat {
-          background: var(--bg-card);
-          border: 1px solid var(--border);
-          border-radius: 1rem;
-          padding: 0.85rem 1.15rem;
-          min-width: 110px;
-          text-align: center;
-        }
-        .stat strong {
-          display: block;
-          font-size: 1.1rem;
-          color: var(--primary-light);
-          margin-bottom: 0.15rem;
-        }
-        .stat span {
-          font-size: 0.75rem;
-          color: var(--text-muted);
-        }
-        .hero-actions {
-          display: flex;
-          justify-content: center;
-          gap: 0.75rem;
-          flex-wrap: wrap;
-        }
-        @media (min-width: 640px) {
-          .home { padding-top: 4rem; }
+        .socials a:hover { color: var(--accent); }
+        @media (min-width: 768px) {
+          .home { padding-top: 5rem; }
         }
       `}</style>
     </section>

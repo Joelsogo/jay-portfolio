@@ -38,15 +38,15 @@ export default function Skills() {
   return (
     <section id="skills" className="section">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <span className="label">Capabilities</span>
           <h2>Skills & tools</h2>
           <p>Research, quality review, and modern technical toolkit</p>
         </div>
 
         <div className="grid">
-          {groups.map((g) => (
-            <div key={g.title} className="card group">
+          {groups.map((g, i) => (
+            <div key={g.title} className={`card group reveal reveal-delay-${i + 1}`}>
               <h3>{g.title}</h3>
               <div className="tags">
                 {g.items.map((item) => (
@@ -60,12 +60,12 @@ export default function Skills() {
 
       <style>{`
         .grid { display: grid; gap: 1.25rem; }
-        .group { padding: 1.5rem; }
+        .group { padding: 1.65rem 1.6rem; }
         .group h3 {
-          font-size: 0.9rem; font-weight: 600; color: var(--text);
-          margin-bottom: 1rem;
+          font-size: 0.95rem; font-weight: 650; color: var(--text);
+          margin-bottom: 1.15rem;
         }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         @media (min-width: 640px) {
           .grid { grid-template-columns: 1fr 1fr; }
         }

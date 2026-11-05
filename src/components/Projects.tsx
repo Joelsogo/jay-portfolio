@@ -48,27 +48,27 @@ export default function Projects() {
   return (
     <section id="projects" className="section">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <span className="label">Selected work</span>
           <h2>Projects</h2>
           <p>Professional workflows and selected technical work</p>
         </div>
 
         <div className="grid">
-          {projects.map((p) => (
-            <article key={p.title} className="card project">
+          {projects.map((p, i) => (
+            <article key={p.title} className={`card project reveal reveal-delay-${(i % 3) + 1}`}>
               <div className="top">
                 <span className="type">{p.type}</span>
                 <div className="links">
                   {p.github && (
-                    <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                      <FiGithub size={16} />
-                    </a>
-                  )}
-                  {p.github && (
-                    <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label="Open">
-                      <FiExternalLink size={16} />
-                    </a>
+                    <>
+                      <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <FiGithub size={16} />
+                      </a>
+                      <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label="Open">
+                        <FiExternalLink size={16} />
+                      </a>
+                    </>
                   )}
                 </div>
               </div>
@@ -86,28 +86,43 @@ export default function Projects() {
 
       <style>{`
         .grid {
-          display: grid; gap: 1rem;
+          display: grid; gap: 1.15rem;
           grid-template-columns: 1fr;
         }
-        .project { padding: 1.35rem 1.4rem; }
-        .project:hover { border-color: var(--accent-border); }
+        .project {
+          padding: 1.5rem 1.5rem;
+          display: flex; flex-direction: column;
+        }
+        .project:hover {
+          transform: translateY(-4px);
+          border-color: var(--border-hover);
+        }
         .top {
           display: flex; justify-content: space-between; align-items: center;
-          margin-bottom: 0.65rem;
+          margin-bottom: 0.75rem;
         }
         .type {
-          font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+          font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
           text-transform: uppercase; color: var(--text-muted);
         }
-        .links { display: flex; gap: 0.65rem; }
-        .links a { color: var(--text-muted); transition: color 0.15s; }
-        .links a:hover { color: var(--accent); }
+        .links { display: flex; gap: 0.7rem; }
+        .links a {
+          color: var(--text-muted);
+          width: 32px; height: 32px; border-radius: 9px;
+          display: grid; place-items: center;
+          transition: color 0.2s, background 0.2s;
+        }
+        .links a:hover {
+          color: var(--accent);
+          background: var(--accent-dim);
+        }
         .project h3 {
-          font-size: 1.05rem; font-weight: 600; margin-bottom: 0.45rem;
+          font-size: 1.05rem; font-weight: 650; margin-bottom: 0.5rem;
+          letter-spacing: -0.015em;
         }
         .project p {
-          color: var(--text-secondary); font-size: 0.9rem; line-height: 1.55;
-          margin-bottom: 0.9rem;
+          color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;
+          margin-bottom: 1rem; flex: 1;
         }
         .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
         @media (min-width: 640px) {

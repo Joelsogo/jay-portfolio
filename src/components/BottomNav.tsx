@@ -25,8 +25,8 @@ export default function BottomNav({ active, onNavigate }: Props) {
           onClick={() => onNavigate(item.id)}
           aria-label={item.label}
         >
-          {item.icon}
-          <span>{item.label}</span>
+          <span className="icon-wrap">{item.icon}</span>
+          <span className="label">{item.label}</span>
         </button>
       ))}
       <style>{`
@@ -34,19 +34,31 @@ export default function BottomNav({ active, onNavigate }: Props) {
           position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
           height: calc(var(--nav-h) + var(--safe-bottom));
           padding-bottom: var(--safe-bottom);
-          background: rgba(7, 11, 20, 0.92);
-          backdrop-filter: blur(18px);
-          -webkit-backdrop-filter: blur(18px);
+          background: rgba(5, 8, 15, 0.9);
+          backdrop-filter: blur(24px) saturate(1.3);
+          -webkit-backdrop-filter: blur(24px) saturate(1.3);
           border-top: 1px solid var(--border);
           display: flex; justify-content: space-around; align-items: center;
+          box-shadow: 0 -8px 32px rgba(0,0,0,0.3);
         }
         .item {
-          display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
-          color: var(--text-muted); font-size: 0.6rem; font-weight: 500;
-          padding: 0.35rem 0.4rem; min-width: 48px; transition: color 0.15s;
+          display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
+          color: var(--text-muted); font-size: 0.58rem; font-weight: 500;
+          padding: 0.4rem 0.35rem; min-width: 48px;
+          transition: color 0.2s;
+          position: relative;
+        }
+        .icon-wrap {
+          display: grid; place-items: center;
+          width: 36px; height: 28px; border-radius: 10px;
+          transition: background 0.25s, color 0.25s, transform 0.25s var(--ease);
         }
         .item.active { color: var(--accent); }
-        .item.active span { font-weight: 600; }
+        .item.active .icon-wrap {
+          background: var(--accent-dim);
+          transform: translateY(-2px);
+        }
+        .item.active .label { font-weight: 650; }
         @media (min-width: 900px) { .bnav { display: none; } }
       `}</style>
     </nav>
